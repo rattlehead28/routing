@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <script src="mainController.js"></script>
+
+	  <script src="input.js"></script>
+    <script src="table.js"></script>
+    <script src="update.js"></script>
+	
+	<title>FORM</title>
+  <header class="container-fluid">
+    <h1 class="headtext">FORM</h1>
+    <img src="images/primeng.png" height="70" width="70" class="logo">
+  </header>
+</head>
+<body>
+
+<div ng-app="project" ng-controller="myCtrl">  
+<div class = "container-fluid" >
+  
+	<div class = "row">
+    
+    <div class="col-md-2 sidenav">
+		
+      
+        <ul class="nav nav-pills nav-stacked">
+          <li><a class="fa fa-home" aria-hidden="true" style="font-size:48px;color:blue" ui-sref='root'></a></li><br>
+          <li><a class="btn btn-info" ui-sref='input' style="color:white">Input</a><br></li>
+		 	    <li><a class="btn btn-info" ui-sref='table' style="color:white">Result</a><br></li>
+          
+
+        </ul>
+      
+    
+  	</div>
+  
+</div>
+</div>
+<div class = "container-fluid" >
+<div class="tableView"><div class="col-md-7 col-md-offset-5" ui-view></div>
+</div>
+
+ </div>
+
+  
+
+</body>
+<!--<footer class="container-fluid">
+  <p>Footer Text</p>
+</footer>-->
+</html>

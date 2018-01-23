@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<table class="table">
+   				 <thead class="thead-dark">
+      				<tr>
+                <th>Sr no.</th>
+                <th>Image</th>
+      					<th>Name</th>
+        				<th>Phone no</th>
+        				<th>Email</th>
+        				<th>Address</th>
+        				
+      				</tr>
+    			</thead>
+    			<tbody >     				
+     				 <tr ng-repeat="x in arr">
+     				 <td>{{$index+1}}</td>
+             <td><img src="{{x.Image}}" height="70" width="70"/></td>
+    				 <td>{{x.Name}}</td>
+   					 <td>{{x.Phone}}</td>
+   					 <td>{{x.Email}}</td>
+             <td>{{x.Address.Flat}},{{x.Address.Street}},{{x.Address.City}},
+             {{x.Address.State}},{{x.Address.Country}},{{x.Address.Pin}}</td>
+             <td><button type="button" class="fa fa-pencil-square-o" ng-click="addUpdate($index)"></button></td> 
+             <td><button type="button" class="fa fa-trash" ng-click="del($index)" ui-sref='table'></button></td>
+   					 
+  					 </tr>
+    			</tbody>
+
+  			</table>
